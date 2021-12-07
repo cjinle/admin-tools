@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>邀请好友</h1>
+    <h1>设置用户任务当天活跃度</h1>
     <el-card>
       <el-row>
         <el-col :span="8" :offset="6">
@@ -18,7 +18,7 @@
             <el-form-item label="用户ID">
               <el-input v-model="form.mid"></el-input>
             </el-form-item>
-            <el-form-item label="被邀请ID" prop="value" required>
+            <el-form-item label="当前活跃度" prop="value" required>
               <el-input v-model="form.value"></el-input>
             </el-form-item>
             <el-form-item>
@@ -33,19 +33,19 @@
 </template>
 <script>
 export default {
-  name: 'Invite',
+  name: 'TaskActive',
   data() {
     const localData = this.$FC.getLocalData()
     return {
       form: {
-        func: 'user.invite',
+        func: 'user.taskactive',
         gid: localData?.gid,
         mid: localData?.mid,
         value: ''
       },
       rules: {
         value: [
-          { required: true, message: '请输入ID', trigger: 'blur' }
+          { required: true, message: '请输入活跃度', trigger: 'blur' }
         ]
       },
       games: this.$FC.games,

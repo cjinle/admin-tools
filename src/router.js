@@ -1,3 +1,4 @@
+import Empty from './components/Empty.vue'
 import Index from './components/Index.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import PlayTime from './components/PlayTime.vue'
@@ -10,7 +11,11 @@ import Prop from './components/Prop.vue'
 import Continuous from './components/Continuous.vue'
 import OnlineBox from './components/OnlineBox.vue'
 import Region from './components/Region.vue'
-import Empty from './components/Empty.vue'
+
+import SignWheel from './components/SignWheel.vue'
+import TaskActive from './components/TaskActive.vue'
+
+
 
 const routes = [
   { path: '/', component: Index },
@@ -24,6 +29,9 @@ const routes = [
   { path: '/continuous', component: Continuous },
   { path: '/onlinebox', component: OnlineBox },
   { path: '/region', component: Region },
+
+  { path: '/signwheel', component: SignWheel },
+  { path: '/taskactive', component: TaskActive },
 
   { path: '/puzzle', component: HelloWorld },
   { path: '/404', component: Empty }

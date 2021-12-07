@@ -63,7 +63,6 @@ export default {
         if (!valid) {
           return false
         }
-        console.log(this.form)
         this.loading = true
         this.$FC.saveLocalData(this.form);
         this.$http.post(this.$config.api, this.form).then(res=>{

@@ -48,9 +48,6 @@ export default {
     return {
       loading: false
     };
-  },
-  methods: {
-
   }
 };
 </script>
