@@ -8,7 +8,7 @@
     active-text-color="#ffd04b"
     >
     <el-submenu index="1">
-      <template slot="title"><i class="el-icon-message"></i>用户数据</template>
+      <template slot="title"><i class="el-icon-user"></i>用户数据</template>
       <el-menu-item index="/playtime" route="/playtime">玩牌时长</el-menu-item>
       <el-menu-item index="/payamount" route="/payamount">充值金额</el-menu-item>
       <el-menu-item index="/mtime" route="/mtime">修改注册时间</el-menu-item>
@@ -22,7 +22,7 @@
     </el-submenu>
 
     <el-submenu index="2">
-      <template slot="title"><i class="el-icon-menu"></i>活动数据</template>
+      <template slot="title"><i class="el-icon-present"></i>活动数据</template>
       <el-menu-item index="/actscore" route="/actscore">普通积分</el-menu-item>
       <el-menu-item index="/exchange" route="/exchange">积分兑换</el-menu-item>
       <el-menu-item index="/sevendays" route="/sevendays">七天任务</el-menu-item>
@@ -31,7 +31,7 @@
     </el-submenu>
 
     <el-submenu index="3">
-      <template slot="title"><i class="el-icon-setting"></i>游戏数据</template>
+      <template slot="title"><i class="el-icon-discover"></i>游戏数据</template>
       <el-menu-item index="/signwheel" route="/signwheel">签到转盘</el-menu-item>
       <el-menu-item index="/taskactive" route="/taskactive">任务活跃度</el-menu-item>
     </el-submenu>

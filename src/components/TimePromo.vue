@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>限时特惠/开启/关闭</h1>
+    <h1>限时特惠</h1>
     <el-card>
       <el-row>
         <el-col :span="8" :offset="6">
@@ -18,7 +18,7 @@
             <el-form-item label="用户ID">
               <el-input v-model="form.mid"></el-input>
             </el-form-item>
-            <el-form-item label="类型">
+            <el-form-item label="开关状态">
               <el-switch
                 v-model="form.value">
               </el-switch>

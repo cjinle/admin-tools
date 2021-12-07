@@ -3,7 +3,17 @@
     <h1>清除等待宝箱时间</h1>
     <el-card>
       <el-row>
+        <el-col :span="24">
+          <el-alert
+            title="设置后，宝箱倒计时为剩余30秒"
+            type="warning"
+            show-icon>
+          </el-alert>
+        </el-col>
+      </el-row>
+      <el-row style="margin-top: 10px;">
         <el-col :span="8" :offset="6">
+          
           <el-form ref="form" :model="form" :rules="rules" label-width="120px" v-loading="loading">
             <el-form-item label="游戏平台">
               <el-select v-model="form.gid" style="width:100%;" placeholder="请选择游戏平台">
