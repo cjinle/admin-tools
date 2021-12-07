@@ -9,6 +9,7 @@ import Newbie from './components/Newbie.vue'
 import Prop from './components/Prop.vue'
 import Continuous from './components/Continuous.vue'
 import OnlineBox from './components/OnlineBox.vue'
+import Region from './components/Region.vue'
 import Empty from './components/Empty.vue'
 
 const routes = [
@@ -22,6 +23,7 @@ const routes = [
   { path: '/prop', component: Prop },
   { path: '/continuous', component: Continuous },
   { path: '/onlinebox', component: OnlineBox },
+  { path: '/region', component: Region },
 
   { path: '/puzzle', component: HelloWorld },
   { path: '/404', component: Empty }
