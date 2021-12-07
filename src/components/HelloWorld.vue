@@ -146,5 +146,4 @@ export default {
 .yspan{
   margin: 20px 0;
 }
-
 </style>

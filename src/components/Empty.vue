@@ -12,6 +12,3 @@ export default {
   name: 'Empty'
 }
 </script>
-<style>
-  
-</style>

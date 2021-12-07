@@ -44,22 +44,14 @@
 export default {
   name: "Menu",
   props: {},
-  methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
-    }
-  },
-
   data() {
     return {
       loading: false
     };
   },
+  methods: {
+
+  }
 };
 </script>
 
-<style scoped>
-</style>
