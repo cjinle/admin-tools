@@ -9,6 +9,7 @@
           <el-main>
             <router-view></router-view>
           </el-main>
+          <el-footer class="footer">Ver: {{ version }}</el-footer>
         </el-container>
       </el-col>
     </el-row>
@@ -24,6 +25,11 @@ export default {
   name: 'App',
   components: {
     Menu
+  },
+  data() {
+    return {
+      version: this.$config.version
+    }
   }
 }
 
@@ -34,5 +40,11 @@ body{
   margin:0;
   padding:0;
   background-color: #f6f6f6;
+}
+.footer{
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 20px;
 }
 </style>

@@ -1,6 +1,5 @@
 import Empty from './components/Empty.vue'
 import Index from './components/Index.vue'
-import HelloWorld from './components/HelloWorld.vue'
 import PlayTime from './components/PlayTime.vue'
 import PayAmount from './components/PayAmount.vue'
 import Mtime from './components/Mtime.vue'
@@ -12,10 +11,16 @@ import Continuous from './components/Continuous.vue'
 import OnlineBox from './components/OnlineBox.vue'
 import Region from './components/Region.vue'
 
+import ActScore from './components/ActScore.vue'
+import Exchange from './components/Exchange.vue'
+import SevenDays from './components/SevenDays.vue'
+import Puzzle from './components/Puzzle.vue'
+import PlayScoreRank from './components/PlayScoreRank.vue'
+
 import SignWheel from './components/SignWheel.vue'
 import TaskActive from './components/TaskActive.vue'
 
-
+// import HelloWorld from './components/HelloWorld.vue'
 
 const routes = [
   { path: '/', component: Index },
@@ -30,11 +35,17 @@ const routes = [
   { path: '/onlinebox', component: OnlineBox },
   { path: '/region', component: Region },
 
+  { path: '/actscore', component: ActScore },
+  { path: '/exchange', component: Exchange },
+  { path: '/sevendays', component: SevenDays },
+  { path: '/puzzle', component: Puzzle },
+  { path: '/playscorerank', component: PlayScoreRank },
+
   { path: '/signwheel', component: SignWheel },
   { path: '/taskactive', component: TaskActive },
 
-  { path: '/puzzle', component: HelloWorld },
   { path: '/404', component: Empty }
+
 ]
 
 export { routes }

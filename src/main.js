@@ -16,7 +16,10 @@ Vue.use(VueRouter)
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
-Vue.prototype.$config = { api: 'http://192.168.100.160/mm/testdataapi.php' }
+Vue.prototype.$config = { 
+  api: 'http://192.168.100.160/mm/testdataapi.php',
+  version: require('../package.json').version
+}
 Vue.prototype.$FC = FC
 
 if (process.env.NODE_ENV === 'development') {
