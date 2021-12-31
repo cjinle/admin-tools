@@ -16,6 +16,7 @@ import Exchange from './components/Exchange.vue'
 import SevenDays from './components/SevenDays.vue'
 import Puzzle from './components/Puzzle.vue'
 import PlayScoreRank from './components/PlayScoreRank.vue'
+import PayLottery from './components/PayLottery.vue'
 
 import SignWheel from './components/SignWheel.vue'
 import TaskActive from './components/TaskActive.vue'
@@ -40,6 +41,8 @@ const routes = [
   { path: '/sevendays', component: SevenDays },
   { path: '/puzzle', component: Puzzle },
   { path: '/playscorerank', component: PlayScoreRank },
+  { path: '/paylottery', component: PayLottery },
+
 
   { path: '/signwheel', component: SignWheel },
   { path: '/taskactive', component: TaskActive },

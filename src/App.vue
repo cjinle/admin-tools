@@ -9,7 +9,7 @@
           <el-main>
             <router-view></router-view>
           </el-main>
-          <el-footer class="footer">Ver: {{ version }}</el-footer>
+          <el-footer class="footer">Build: {{ version }}</el-footer>
         </el-container>
       </el-col>
     </el-row>

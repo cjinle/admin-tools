@@ -1,6 +1,6 @@
 {
   "name": "admin-tools",
-  "version": "2021.12.07",
+  "version": "2021.12.30",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -1,9 +1,19 @@
 <template>
   <div>
-    <h1>清除用户道具</h1>
+    <h1>充值抽大奖活动</h1>
     <el-card>
-      <el-row>
-        <el-col :span="10" :offset="6">
+      <el-row v-show="form.type=='-1'">
+        <el-col :span="24">
+          <el-alert
+            title="清除所有活动数据，需要等待10分钟后才能测试"
+            type="warning"
+            show-icon>
+          </el-alert>
+        </el-col>
+      </el-row>
+
+      <el-row style="margin-top: 20px;">
+        <el-col :span="8" :offset="6">
           <el-form ref="form" :model="form" :rules="rules" label-width="120px" v-loading="loading">
             <el-form-item label="游戏平台">
               <el-select v-model="form.gid" style="width:100%;" placeholder="请选择游戏平台">
@@ -15,17 +25,13 @@
                 </el-option>
               </el-select>
             </el-form-item>
-            <el-form-item label="用户ID">
-              <el-input v-model="form.mid"></el-input>
-            </el-form-item>
-            <el-form-item label="道具类型">
-              <el-radio-group v-model="form.value" size="small">
-                <el-radio-button label="1">VIP</el-radio-button>
-                <el-radio-button label="2">蓝钻</el-radio-button>
-                <el-radio-button label="3">红钻</el-radio-button>
-                <el-radio-button label="4">房卡</el-radio-button>
-                <el-radio-button label="5">小喇叭</el-radio-button>
-              </el-radio-group>
+            <el-form-item label="操作类型">
+              <el-select v-model="form.type" style="width:100%;" placeholder="请选择操作类型">
+                <el-option label="进行中" value="1"></el-option>
+                <el-option label="等待开奖" value="2"></el-option>
+                <el-option label="已开奖" value="3"></el-option>
+                <el-option label="清除所有数据" value="10"></el-option>
+              </el-select>
             </el-form-item>
             <el-form-item>
               <el-button type="primary" @click="onSubmit">提交</el-button>
@@ -39,21 +45,20 @@
 </template>
 <script>
 export default {
-  name: 'Newbie',
+  name: 'SevenDays',
   data() {
     const localData = this.$FC.getLocalData()
     return {
       form: {
-        func: 'user.prop',
+        func: 'act.paylottery',
         gid: localData?.gid,
-        mid: localData?.mid,
-        value: '1'
+        type: '1'
       },
       rules: {
-
       },
       games: this.$FC.games,
-      loading: false
+      loading: false,
+      sendLoading: false
     }
   },
   methods: {
@@ -64,7 +69,7 @@ export default {
         }
         this.loading = true
         this.$FC.saveLocalData(this.form);
-        this.$http.post(this.$config.api, this.form).then(res=>{
+        this.$http.post(this.$config.api, this.form, {timeout: 30000}).then(res=>{
           if (res.data.ret === 0) {
             this.$message.success("操作成功！" + res.data?.msg)
           } else {
