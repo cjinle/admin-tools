@@ -19,6 +19,7 @@
       <el-menu-item index="/continuous" route="/continuous">连续签到</el-menu-item>
       <el-menu-item index="/onlinebox" route="/onlinebox">宝箱时间</el-menu-item>
       <el-menu-item index="/region" route="/region">用户地区</el-menu-item>
+      <el-menu-item index="/voucher" route="/voucher">用户奖券</el-menu-item>
     </el-submenu>
 
     <el-submenu index="2">

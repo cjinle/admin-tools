@@ -10,6 +10,7 @@ import Prop from './components/Prop.vue'
 import Continuous from './components/Continuous.vue'
 import OnlineBox from './components/OnlineBox.vue'
 import Region from './components/Region.vue'
+import Voucher from './components/Voucher.vue'
 
 import ActScore from './components/ActScore.vue'
 import Exchange from './components/Exchange.vue'
@@ -35,6 +36,7 @@ const routes = [
   { path: '/continuous', component: Continuous },
   { path: '/onlinebox', component: OnlineBox },
   { path: '/region', component: Region },
+  { path: '/voucher', component: Voucher },
 
   { path: '/actscore', component: ActScore },
   { path: '/exchange', component: Exchange },

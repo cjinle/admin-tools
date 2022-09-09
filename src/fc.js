@@ -8,7 +8,8 @@ const FC = {
     { id: '4', name: '缅甸' },
     { id: '5', name: '马来' },
     { id: '6', name: '墨西哥' },
-    { id: '7', name: '菲律宾' }
+    { id: '7', name: '菲律宾' },
+    { id: '8', name: '泰国三公' }
   ],
   saveLocalData: (values) => {
     for (let k in values) {
