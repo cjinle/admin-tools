@@ -37,6 +37,12 @@
       <el-menu-item index="/signwheel" route="/signwheel">签到转盘</el-menu-item>
       <el-menu-item index="/taskactive" route="/taskactive">任务活跃度</el-menu-item>
     </el-submenu>
+
+    <el-submenu index="4">
+      <template slot="title"><i class="el-icon-s-promotion"></i>开发工具</template>
+      <el-menu-item index="/jsonformat" route="/jsonformat">JSON格式化</el-menu-item>
+      <el-menu-item index="/tools" route="/tools">小工具</el-menu-item>
+    </el-submenu>
   </el-menu>
 </template>
 

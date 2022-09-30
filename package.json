@@ -1,6 +1,6 @@
 {
   "name": "admin-tools",
-  "version": "2022.09.08",
+  "version": "2022.09.29",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -11,6 +11,7 @@
     "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
+    "json-format-highlight": "^1.0.4",
     "vue": "^2.6.11",
     "vue-axios": "^3.4.0",
     "vue-router": "^3.5.3"
