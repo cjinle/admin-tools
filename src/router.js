@@ -21,6 +21,7 @@ import PayLottery from './components/PayLottery.vue'
 
 import SignWheel from './components/SignWheel.vue'
 import TaskActive from './components/TaskActive.vue'
+import Slotsv4 from './components/Slotsv4.vue'
 
 import DevJsonFormat from './components/DevTools/JsonFormat.vue'
 import DevTools from './components/DevTools/Tools.vue'
@@ -51,6 +52,7 @@ const routes = [
 
   { path: '/signwheel', component: SignWheel },
   { path: '/taskactive', component: TaskActive },
+  { path: '/slotsv4', component: Slotsv4 },
 
   { path: '/jsonformat', component: DevJsonFormat },
   { path: '/tools', component: DevTools },

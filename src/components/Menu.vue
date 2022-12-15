@@ -36,6 +36,8 @@
       <template slot="title"><i class="el-icon-discover"></i>游戏数据</template>
       <el-menu-item index="/signwheel" route="/signwheel">签到转盘</el-menu-item>
       <el-menu-item index="/taskactive" route="/taskactive">任务活跃度</el-menu-item>
+      <el-menu-item index="/slotsv4" route="/slotsv4">老虎机图标</el-menu-item>
+      <el-menu-item index="/slotsv4wheel" route="/slotsv4wheel">老虎机转盘</el-menu-item>
     </el-submenu>
 
     <el-submenu index="4">
