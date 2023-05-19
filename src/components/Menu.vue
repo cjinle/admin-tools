@@ -44,6 +44,7 @@
       <template slot="title"><i class="el-icon-s-promotion"></i>开发工具</template>
       <el-menu-item index="/jsonformat" route="/jsonformat">JSON格式化</el-menu-item>
       <el-menu-item index="/tools" route="/tools">小工具</el-menu-item>
+      <el-menu-item index="/websocket" route="/websocket">WebSocket</el-menu-item>
     </el-submenu>
   </el-menu>
 </template>

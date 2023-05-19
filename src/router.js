@@ -22,9 +22,11 @@ import PayLottery from './components/PayLottery.vue'
 import SignWheel from './components/SignWheel.vue'
 import TaskActive from './components/TaskActive.vue'
 import Slotsv4 from './components/Slotsv4.vue'
+import Slotsv4Wheel from './components/Slotsv4Wheel.vue'
 
 import DevJsonFormat from './components/DevTools/JsonFormat.vue'
 import DevTools from './components/DevTools/Tools.vue'
+import DevWebsocketClient from './components/DevTools/WebsocketClient.vue'
 
 // import HelloWorld from './components/HelloWorld.vue'
 
@@ -53,9 +55,11 @@ const routes = [
   { path: '/signwheel', component: SignWheel },
   { path: '/taskactive', component: TaskActive },
   { path: '/slotsv4', component: Slotsv4 },
+  { path: '/slotsv4wheel', component: Slotsv4Wheel },
 
   { path: '/jsonformat', component: DevJsonFormat },
   { path: '/tools', component: DevTools },
+  { path: '/websocket', component: DevWebsocketClient },
 
   { path: '/404', component: Empty }
 

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>老虎机设置图标</h1>
+    <h1>老虎机转盘概率</h1>
     <el-card>
       <el-row>
-        <el-col :span="22" :offset="1">
+        <el-col :span="24" :offset="4">
           <el-form ref="form" :model="form" label-width="120px" v-loading="loading">
             <el-row>
               <el-col :span="8">
@@ -21,50 +21,8 @@
             </el-row>
             <el-row>
               <el-col :span="8">
-                <el-form-item label="用户ID">
-                  <el-input v-model="form.mid"></el-input>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="24">
-                <el-form-item label="图标">
-                  <el-row>
-                    <el-col :span="4" v-for="x in [0,1,2,3,4]" :key="'row'+x">
-                      <el-select v-model="form.icon[x]" style="width:100%;">
-                        <el-option
-                          v-for="icon in iconCfg"
-                          :key="'id'+icon.id"
-                          :label="icon.name"
-                          :value="icon.id">
-                        </el-option>
-                      </el-select>
-                    </el-col>
-                  </el-row>
-                  <el-row>
-                    <el-col :span="4" v-for="x in [5,6,7,8,9]" :key="'row'+x">
-                      <el-select v-model="form.icon[x]" style="width:100%;">
-                        <el-option
-                          v-for="icon in iconCfg"
-                          :key="'id'+icon.id"
-                          :label="icon.name"
-                          :value="icon.id">
-                        </el-option>
-                      </el-select>
-                    </el-col>
-                  </el-row>
-                  <el-row>
-                    <el-col :span="4" v-for="x in [10,11,12,13,14]" :key="'row'+x">
-                      <el-select v-model="form.icon[x]" style="width:100%;">
-                        <el-option
-                          v-for="icon in iconCfg"
-                          :key="'id'+icon.id"
-                          :label="icon.name"
-                          :value="icon.id">
-                        </el-option>
-                      </el-select>
-                    </el-col>
-                  </el-row>
+                <el-form-item :label="x.name" v-for="x in wheelCfg" :key="'input'+x.id">
+                  <el-input v-model="form.pr[x.id]"></el-input>
                 </el-form-item>
               </el-col>
             </el-row>
@@ -89,33 +47,16 @@
   </div>
 </template>
 <script>
-
-const iconCfg = [
-  {id: 1, name: "J"},
-  {id: 2, name: "Q"},
-  {id: 3, name: "K"},
-  {id: 4, name: "A"},
-  {id: 5, name: "菱形"},
-  {id: 6, name: "金币"},
-  {id: 7, name: "铃铛"},
-  {id: 8, name: "钻石"},
-  {id: 9, name: "BAR"},
-  {id: 10, name: "WILD"},
-  {id: 11, name: "SCATTER"},
-  {id: 12, name: "JACKPOT"}
-]
-
 export default {
-  name: 'Slotsv4',
+  name: 'Slotsv4Wheel',
   data() {
     const localData = this.$FC.getLocalData()
     return {
-      iconCfg: iconCfg,
+      wheelCfg: [],
       form: {
-        func: 'game.slotsv4SetIcon',
+        func: 'game.slotsv4SetWheelPr',
         gid: localData?.gid,
-        icon: [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-        mid: localData?.mid
+        pr: [0,0,0,0,0,0,0,0,0]
       },
       games: this.$FC.games,
       loading: false
@@ -127,12 +68,15 @@ export default {
   methods: {
     onInit() {
       this.loading = true
-      this.$http.post(this.$config.api, {func: 'game.slotsv4Icon',gid: this.form.gid,mid: this.form.mid}).then(res=>{
+      this.$http.post(this.$config.api, {func: 'game.slotsv4WheelPr',gid: this.form.gid}).then(res=>{
         this.loading = false
         if (res.data.ret != 0) {
           return false
         }
-        this.form.icon = res.data.data        
+        this.wheelCfg = res.data.data
+        this.wheelCfg.forEach((v, i)=>{
+          this.form.pr[i] = v.pr
+        })
       }).catch(err=>{
         this.$message.error(err.message)
         this.loading = false
@@ -144,7 +88,7 @@ export default {
           return false
         }
         this.loading = true
-        this.$FC.saveLocalData({gid: this.form.gid,mid: this.form.mid});
+        this.$FC.saveLocalData({gid: this.form.gid});
         this.$http.post(this.$config.api, this.form).then(res=>{
           if (res.data.ret === 0) {
             this.$message.success("操作成功！" + res.data?.msg)
@@ -161,10 +105,10 @@ export default {
     onDel() {
       this.loading = true
       this.$FC.saveLocalData({gid: this.form.gid});
-      this.$http.post(this.$config.api, {func: 'game.slostv4DelIcon',gid: this.form.gid,mid: this.form.mid}).then(res=>{
+      this.$http.post(this.$config.api, {func: 'game.slostv4DelWheelPr',gid: this.form.gid}).then(res=>{
         if (res.data.ret === 0) {
           this.$message.success("操作成功！" + res.data?.msg)
-          this.form.icon = []
+          this.form.pr = []
         } else {
           this.$message.warning("操作失败！" + res.data?.msg)
         }
