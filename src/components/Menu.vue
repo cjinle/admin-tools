@@ -20,6 +20,7 @@
       <el-menu-item index="/onlinebox" route="/onlinebox">宝箱时间</el-menu-item>
       <el-menu-item index="/region" route="/region">用户地区</el-menu-item>
       <el-menu-item index="/voucher" route="/voucher">用户奖券</el-menu-item>
+      <el-menu-item index="/lastpaytime" route="/lastpaytime">上次支付时间</el-menu-item>
     </el-submenu>
 
     <el-submenu index="2">
@@ -38,6 +39,7 @@
       <el-menu-item index="/taskactive" route="/taskactive">任务活跃度</el-menu-item>
       <el-menu-item index="/slotsv4" route="/slotsv4">老虎机图标</el-menu-item>
       <el-menu-item index="/slotsv4wheel" route="/slotsv4wheel">老虎机转盘</el-menu-item>
+      <el-menu-item index="/slotsjungle" route="/slotsjungle">丛林老虎机</el-menu-item>
     </el-submenu>
 
     <el-submenu index="4">

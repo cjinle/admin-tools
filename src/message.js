@@ -5,21 +5,24 @@
 //   return new Int16Array(buffer)[0] === 256;
 // })()
 
-const pack = function(id, str) {
-  // console.log("pack")
-  let len = str.length
+const pack = function (id, str) {
+  if (!str) {
+    console.log("error str", str)
+    return new ArrayBuffer(0)
+  }
+  let enc = new TextEncoder("utf-8")
+  let arr = enc.encode(str)
+  let len = arr.length
   let buffer = new ArrayBuffer(8 + len)
   let view = new DataView(buffer)
   view.setUint32(0, len)
   view.setUint32(4, id)
   for (let i = 0; i < len; i++) {
-    let code = str.charCodeAt(i)
-    view.setInt8(8 + i, code)
+    view.setUint8(8 + i, arr[i])
   }
   return buffer
 }
-
-const unpack = function(buffer) {
+const unpack = function (buffer) {
   if (!buffer || !(buffer instanceof ArrayBuffer)) {
     console.log("buffer type err", buffer)
     return
@@ -30,10 +33,10 @@ const unpack = function(buffer) {
   msg.id = view.getUint32(4)
   msg.buffer = buffer.slice(8)
   msg.data = {}
-  
+
   let enc = new TextDecoder("utf-8")
   try {
-    msg.data = JSON.parse(enc.decode(new Int8Array(msg.buffer)))
+    msg.data = JSON.parse(enc.decode(new Uint8Array(msg.buffer)))
   } catch (error) {
     console.log(error, enc.decode(msg.buffer))
   }

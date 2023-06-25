@@ -11,6 +11,8 @@ import Continuous from './components/Continuous.vue'
 import OnlineBox from './components/OnlineBox.vue'
 import Region from './components/Region.vue'
 import Voucher from './components/Voucher.vue'
+import LastPayTime from './components/LastPayTime.vue'
+
 
 import ActScore from './components/ActScore.vue'
 import Exchange from './components/Exchange.vue'
@@ -23,6 +25,7 @@ import SignWheel from './components/SignWheel.vue'
 import TaskActive from './components/TaskActive.vue'
 import Slotsv4 from './components/Slotsv4.vue'
 import Slotsv4Wheel from './components/Slotsv4Wheel.vue'
+import SlotsJungle from './components/SlotsJungle.vue'
 
 import DevJsonFormat from './components/DevTools/JsonFormat.vue'
 import DevTools from './components/DevTools/Tools.vue'
@@ -43,6 +46,8 @@ const routes = [
   { path: '/onlinebox', component: OnlineBox },
   { path: '/region', component: Region },
   { path: '/voucher', component: Voucher },
+  { path: '/lastpaytime', component: LastPayTime },
+
 
   { path: '/actscore', component: ActScore },
   { path: '/exchange', component: Exchange },
@@ -56,6 +61,7 @@ const routes = [
   { path: '/taskactive', component: TaskActive },
   { path: '/slotsv4', component: Slotsv4 },
   { path: '/slotsv4wheel', component: Slotsv4Wheel },
+  { path: '/slotsjungle', component: SlotsJungle },
 
   { path: '/jsonformat', component: DevJsonFormat },
   { path: '/tools', component: DevTools },
