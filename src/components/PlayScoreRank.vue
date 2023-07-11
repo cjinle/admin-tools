@@ -47,7 +47,7 @@
 </template>
 <script>
 export default {
-  name: 'SevenDays',
+  name: 'PlayScoreRank',
   data() {
     const localData = this.$FC.getLocalData()
     return {

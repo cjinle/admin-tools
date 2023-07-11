@@ -31,6 +31,7 @@
       <el-menu-item index="/puzzle" route="/puzzle">拼图活动</el-menu-item>
       <el-menu-item index="/playscorerank" route="/playscorerank">玩牌积分排行榜</el-menu-item>
       <el-menu-item index="/paylottery" route="/paylottery">充值抽大奖</el-menu-item>
+      <el-menu-item index="/monopoly" route="/monopoly">大富翁</el-menu-item>
     </el-submenu>
 
     <el-submenu index="3">
