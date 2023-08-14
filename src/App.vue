@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-row type="flex" justify="center">
-      <el-col :xs="24" :sm="24" :md="24" :lg="18" :xl="16">
+      <el-col :xs="24" :sm="24" :md="24" :lg="18" :xl="14">
         <el-container>
           <el-header>
             <Menu />
