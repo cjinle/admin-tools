@@ -86,6 +86,7 @@ const menu3 = [
   {"path": "/slotsv4", "name": "老虎机图标"},
   {"path": "/slotsv4wheel", "name": "老虎机转盘"},
   {"path": "/slotsjungle", "name": "丛林老虎机"},
+  {"path": "/slotsfubao", "name": "多福多宝老虎机"},
   {"path": "/stamp", "name": "集邮"}
 ]
 

@@ -27,6 +27,7 @@ import TaskActive from './components/TaskActive.vue'
 import Slotsv4 from './components/Slotsv4.vue'
 import Slotsv4Wheel from './components/Slotsv4Wheel.vue'
 import SlotsJungle from './components/SlotsJungle.vue'
+import SlotsFubao from './components/SlotsFubao.vue'
 import Stamp from './components/Stamp.vue'
 
 import DevJsonFormat from './components/DevTools/JsonFormat.vue'
@@ -65,6 +66,7 @@ const routes = [
   { path: '/slotsv4', component: Slotsv4 },
   { path: '/slotsv4wheel', component: Slotsv4Wheel },
   { path: '/slotsjungle', component: SlotsJungle },
+  { path: '/slotsfubao', component: SlotsFubao },
   { path: '/stamp', component: Stamp },
 
   { path: '/jsonformat', component: DevJsonFormat },
