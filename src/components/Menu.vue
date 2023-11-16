@@ -58,6 +58,7 @@
 const menu1 = [
   {"path": "/playtime", "name": "玩牌时长"},
   {"path": "/payamount", "name": "充值金额"},
+  {"path": "/winmoney", "name": "累计赢取筹码"},
   {"path": "/mtime", "name": "修改注册时间"},
   {"path": "/invite", "name": "邀请好友"},
   {"path": "/timepromo", "name": "限时特惠"},

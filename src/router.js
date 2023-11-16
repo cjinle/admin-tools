@@ -2,6 +2,7 @@ import Empty from './components/Empty.vue'
 import Index from './components/Index.vue'
 import PlayTime from './components/PlayTime.vue'
 import PayAmount from './components/PayAmount.vue'
+import WinMoney from './components/WinMoney.vue'
 import Mtime from './components/Mtime.vue'
 import Invite from './components/Invite.vue'
 import TimePromo from './components/TimePromo.vue'
@@ -40,6 +41,7 @@ const routes = [
   { path: '/', component: Index },
   { path: '/playtime', component: PlayTime },
   { path: '/payamount', component: PayAmount },
+  { path: '/winmoney', component: WinMoney },
   { path: '/mtime', component: Mtime },
   { path: '/invite', component: Invite },
   { path: '/timepromo', component: TimePromo },
